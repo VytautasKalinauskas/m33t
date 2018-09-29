@@ -19,20 +19,16 @@ public class MainActivity extends AppCompatActivity implements IChange_Activity{
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = newIntent(MainActivity.this, SignUpActivity.class, false);
+                Intent intent = newIntent(MainActivity.this, SignUpActivity.class);
                 MainActivity.this.startActivity(intent);
             }
         });
     }
 
     @Override
-    public Intent newIntent(Context context, Class cl, boolean needIntents) {
+    public Intent newIntent(Context context, Class cl) {
         Intent intent = new Intent(context, cl);
+
         return intent;
-    }
-
-    @Override
-    public void addExtras(String extraName, Object extra) {
-
     }
 }

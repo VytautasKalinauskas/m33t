@@ -5,7 +5,5 @@ import android.content.Intent;
 
 public interface IChange_Activity {
 
-    public Intent newIntent(Context context, Class cl, boolean needIntents);
-
-    public void addExtras(String extraName, Object extra);
+    public Intent newIntent(Context context, Class cl);
 }
